@@ -27,4 +27,5 @@ RUN SERVER
 
 ### Running the Test Client
 
+
 Open a second terminal window, run `npm run client` and point Chrome to `localhost:1234`. Optionally open the Javascript console. Twiddle the encoder knob to see if the paddle moves.
