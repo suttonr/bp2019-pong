@@ -6,7 +6,7 @@ const CONFIG = {
 const DBG = false;
 
 // select configuration
-const { COM1, COM2, INPUT_SCALE, BAUDRATE } = CONFIG['SRI'];
+const { COM1, COM2, INPUT_SCALE, BAUDRATE } = CONFIG['EXHIBIT'];
 
 // libraries
 const WebSocket = require('ws');
