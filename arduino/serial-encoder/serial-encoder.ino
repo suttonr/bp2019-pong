@@ -12,6 +12,7 @@
 // GLOBALS
 volatile unsigned int encoder0Pos = 0;
 volatile char controlLoc = 'X'; // overwritten during setup
+volatile bool invert = 0;
 
 // SETUP
 void setup()
@@ -89,14 +90,14 @@ void doEncoderA()
   if (digitalRead(ENCODER0PINA) == HIGH)
   {
     // check channel B to see which way encoder is turning
-    if (digitalRead(ENCODER0PINB) == LOW)
+    if ((digitalRead(ENCODER0PINB) == LOW)  && (!invert))
       decrementPos();
    else
       incrementPos();
   }
   else
   { // Must be a high-to-low transistion
-    if (digitalRead(ENCODER0PINB) == HIGH)
+    if ((digitalRead(ENCODER0PINB) == HIGH) && (!invert))
       decrementPos();
     else
       incrementPos();
@@ -110,14 +111,14 @@ void doEncoderB()
   if (digitalRead(ENCODER0PINB) == HIGH)
   {
     // check channel A to see which way encoder is turning
-    if (digitalRead(ENCODER0PINA) == HIGH)
+    if ((digitalRead(ENCODER0PINA) == HIGH) && (!invert))
       decrementPos();
     else
       incrementPos();
   }
   else
   { // Must be a high-to-low transistion
-    if (digitalRead(ENCODER0PINA) == LOW)
+    if (digitalRead((ENCODER0PINA) == LOW) && (!invert))
       decrementPos();
     else
       incrementPos();
