@@ -2,7 +2,7 @@
 /// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 // const ALT_SOCKET = null; // no remote server
 const ALT_SOCKET = 'ws://192.168.2.221'; // socketserver is not localhost
-const ALT_SOCKET_ON = false;
+const ALT_SOCKET_ON = true;
 const DBG = false;
 
 /// LIBRARIES /////////////////////////////////////////////////////////////////

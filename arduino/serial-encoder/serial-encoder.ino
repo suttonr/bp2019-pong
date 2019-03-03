@@ -1,7 +1,7 @@
 // PIN ASSIGNMENTS
 #define ENCODER0PINA 2 // Must support interupts
 #define ENCODER0PINB 3 // Must support interupts
-//#define HOMESWITCH0 4  // Comment-out if no HOMESWITCH
+#define HOMESWITCH0 4  // Comment-out if no HOMESWITCH
 #define LOCSWITCH0 5 // Controller L/R detect pin; default to L
 
 // CONSTANTS
