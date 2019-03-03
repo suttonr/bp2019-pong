@@ -118,7 +118,7 @@ void doEncoderB()
   }
   else
   { // Must be a high-to-low transistion
-    if (digitalRead((ENCODER0PINA) == LOW) ^ invert)
+    if ((digitalRead(ENCODER0PINA) == LOW) ^ invert)
       decrementPos();
     else
       incrementPos();
